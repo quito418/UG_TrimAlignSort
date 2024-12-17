@@ -1,0 +1,6 @@
+version: 1.2
+workflows:
+  - subclass: WDL
+    primaryDescriptorPath: trim_align_sort.wdl
+    authors:
+    - orcid: 0000-0002-2613-1442
