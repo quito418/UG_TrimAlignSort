@@ -22,16 +22,16 @@ version 1.0
 # 1.6.0 More trimmer formats [BIOIN-1105]
 # 1.5.0 Initial commit
 
-import "/tasks/globals.wdl" as Globals
-import "/tasks/structs.wdl" as Structs
-import "/tasks/general_tasks.wdl" as UGGeneralTasks
-import "/tasks/alignment_tasks.wdl" as UGAlignment
-import "/tasks/trimming_tasks.wdl" as TrimmingTasks
-import "/ua_align.wdl" as UaAlignWorkflow
-import "/ua_meth_align.wdl" as UaMethAlignWorkflow
-import "/star_align_gene_count.wdl" as StarAlignWorkflow
-import "/tasks/sorting_tasks.wdl" as SortTasks
-import "/tasks/qc_tasks.wdl" as QCTasks
+import "tasks/globals.wdl" as Globals
+import "tasks/structs.wdl" as Structs
+import "tasks/general_tasks.wdl" as UGGeneralTasks
+import "tasks/alignment_tasks.wdl" as UGAlignment
+import "tasks/trimming_tasks.wdl" as TrimmingTasks
+import "ua_align.wdl" as UaAlignWorkflow
+import "ua_meth_align.wdl" as UaMethAlignWorkflow
+import "star_align_gene_count.wdl" as StarAlignWorkflow
+import "tasks/sorting_tasks.wdl" as SortTasks
+import "tasks/qc_tasks.wdl" as QCTasks
 
 workflow TrimAlignSort {
     input {
@@ -119,7 +119,7 @@ workflow TrimAlignSort {
             "preemptible_tries",
             "dummy_input_for_call_caching",
             "monitoring_script_input",
-            "Globals.glob",
+            # "Globals.glob",
             "CreateReferenceCache.disk_size",
             "Trimmer.disk_size",
             "UAAlignment.Globals.glob",
