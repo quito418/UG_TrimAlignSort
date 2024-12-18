@@ -63,7 +63,7 @@ workflow TrimAlignSort {
         SorterParams? sorter_params
 
         # general parameters
-        Boolean no_address = False
+        Boolean no_address = false
         Int preemptible_tries = 1
         Int cpu
 
