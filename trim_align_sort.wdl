@@ -446,6 +446,7 @@ workflow TrimAlignSort {
                     base_file_name    = base_file_name,
                     preemptible_tries = preemptible_tries,
                     docker            = global.ug_vc_docker,
+                    no_address        = no_address,
                     disk_size         = 4,
                     input_h5_file = ConvertSorterStatsToH5.aggregated_metrics_h5
             }
