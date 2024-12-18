@@ -119,7 +119,7 @@ workflow TrimAlignSort {
             "preemptible_tries",
             "dummy_input_for_call_caching",
             "monitoring_script_input",
-            # "Globals.glob",
+            "Globals.glob",
             "CreateReferenceCache.disk_size",
             "Trimmer.disk_size",
             "UAAlignment.Globals.glob",

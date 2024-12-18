@@ -185,6 +185,7 @@ task ConvertSorterStatsToH5 {
         String base_file_name
 
         # runtime arguments
+        Int cpu = 2
         Int disk_size = 20
         Int preemptible_tries
         String docker
@@ -219,6 +220,7 @@ task ConvertSorterStatsToH5 {
     >>>
     runtime {
         preemptible: preemptible_tries
+        cpu: "~{cpu}"
         memory: "2 GB"
         disks: "local-disk " + disk_size + " HDD"
         docker: docker
