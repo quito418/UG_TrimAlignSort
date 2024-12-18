@@ -630,6 +630,7 @@ task CreateReportSingleSampleQC {
         Float disk_size
         Int preemptible_tries
         String docker
+        Boolean no_address
 
         # python notebook args
         File input_h5_file
@@ -673,7 +674,7 @@ task CreateReportSingleSampleQC {
         docker: docker
         cpu: "1"
         disks: "local-disk " + ceil(disk_size) + " HDD"
-        noAddress: true
+        noAddress: no_address
         maxRetries: preemptible_tries
     }
 
